@@ -1,2 +1,2 @@
 # github_actions_sandbox
-A repo to test out Github Actions
+A repository to test out GitHub Actions
