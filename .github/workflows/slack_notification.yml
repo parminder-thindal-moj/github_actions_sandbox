@@ -34,6 +34,6 @@ jobs:
           # You can pass in multiple channels to post to by providing a comma-delimited list of channel IDs.
           channel-id: 'C07MREJ4X4L'
           # For posting a simple plain text message
-          slack-message: "Nuke result: ${{ job.status }}"
+          slack-message: ":rocket: Action result: ${{ job.status }}"
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
