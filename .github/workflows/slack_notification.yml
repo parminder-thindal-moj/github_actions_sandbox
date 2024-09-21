@@ -4,14 +4,8 @@ name: Slack CI Notification
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push events but only for the "main" branch
-  push:
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
   schedule:
-    - cron: "0 * * * *" # Runs at the top of every hour
+  - cron: "0 * * * *" # Runs at the top of every hour
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
