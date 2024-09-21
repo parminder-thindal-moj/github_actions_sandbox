@@ -46,9 +46,13 @@ jobs:
             id: slack
             uses: slackapi/slack-github-action@v1.27.0
             with:
-                channel-id: 'my_chanel_id'
-                slack-message: |
-                GitHub result: ${{ job.status }}
-                ${{ github.event.pull_request.html_url || github.event.head_commit.url }}
-            env:
+                # Slack channel id, channel name, or user id to post message.
+                # See also: https://api.slack.com/methods/chat.postMessage#channels
+                # You can pass in multiple channels to post to by providing a comma-delimited list of channel IDs.
+                channel-id: 'C07MREJ4X4L'
+                # try sending to channels outside of the current workspace.
+                # For posting a simple plain text message
+                slack-message: ":rocket: Action result: ${{ job.status }}"
+              env:
+                SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
                 SLACK_TOKEN: ${{ secrets.MY_SLACK_TOKEN }}
