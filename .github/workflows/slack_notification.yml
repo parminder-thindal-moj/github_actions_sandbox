@@ -2,7 +2,7 @@ name: Slack CI Notification
 
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: "0 0 * * *" # every-day-at-midnight
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -26,7 +26,7 @@ jobs:
           # Slack channel id, channel name, or user id to post message.
           # See also: https://api.slack.com/methods/chat.postMessage#channels
           # You can pass in multiple channels to post to by providing a comma-delimited list of channel IDs.
-          channel-id: 'C07MREJ4X4L, C07LR5X6KHN'
+          channel-id: 'C07MREJ4X4L'
           # try sending to channels outside of the current workspace.
           # For posting a simple plain text message
           slack-message: ":rocket: Action result: ${{ job.status }}"
